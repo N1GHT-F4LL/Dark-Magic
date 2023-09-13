@@ -16,6 +16,7 @@ if [ -e "$pyovpn_path" ]; then
     echo "Đang tải về tệp pyovpn từ GitHub..."
     curl -LJO "$pyovpn_url" -o "$pyovpn_path"
     echo "Đã tải về và thay thế tệp pyovpn."
+    sudo /usr/local/openvpn_as/bin/ovpn-init
 else
-    echo "$pyovpn_path" not found
+    echo "Tệp pyovpn không tồn tại."
 fi
